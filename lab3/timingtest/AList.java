@@ -34,9 +34,9 @@ public class AList<Item> {
     /** Inserts X into the back of the list. */
     public void addLast(Item x) {
         if (size == items.length) {
-            resize(size + 1);
+            resize((int)Math.round(size*1.01));
         }
-
+        //size*1.01 will get constant time ,but size+1 will not ,it is a magic
         items[size] = x;
         size = size + 1;
     }

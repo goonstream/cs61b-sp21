@@ -3,7 +3,7 @@ package timingtest;
 /** An SLList is a list of integers, which hides the terrible truth
  * of the nakedness within. */
 public class SLList<Item> {
-	private class IntNode {
+	private class IntNode {//"visit Item outside,so can not use static keyword// "
 		public Item item;
 		public IntNode next;
 
@@ -75,7 +75,7 @@ public class SLList<Item> {
 	public static void main(String[] args) {
 		/* Creates a list of one integer, namely 10 */
 		SLList L = new SLList();
-		L.addLast(20);
+		L.addLast(20.1);
 		System.out.println(L.size());
 	}
 }
